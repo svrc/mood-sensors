@@ -16,6 +16,22 @@ public class Sensor {
     String mood;
 
     public Sensor() {
+        
+        switch(doRandom()) {
+            case 1: this.team = "Devs";
+            case 2: this.team = "AppOps";
+            case 3: this.team = "ITOps";
+            case 4: this.team = "Security";
+            case 5: this.team = "DBAs";
+        }
+        
+        switch(doRandom()) {
+            case 1: this.mood = "Happy";
+            case 2: this.mood = "Sad";
+            case 3: this.mood = "Angry";
+            case 4: this.mood = "Scared";
+            case 5: this.mood = "Depressed";
+        }
     }
 
     public Sensor(String team, String mood) {
@@ -28,25 +44,11 @@ public class Sensor {
     }
 
     public String getTeam() {
-        //return temperature;
-        switch(doRandom()) {
-            case 1: return "Devs";
-            case 2: return "AppOps";
-            case 3: return "ITOps";
-            case 4: return "Security";
-            case 5: return "DBAs";
-        }
+        return team;
     }
 
     public String getMood() {
-        //return pressure;
-        switch(doRandom()) {
-            case 1: return "Happy";
-            case 2: return "Sad";
-            case 3: return "Angry";
-            case 4: return "Scared";
-            case 5: return "Depressed";
-        }
+        return mood;
     }
     
     private int doRandom() {
