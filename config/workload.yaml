@@ -1,17 +1,12 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: spring-sensors
+  name: devx-mood-backend
   labels:
-    app.kubernetes.io/name: spring-sensors
-    app.tanzu.vmware.com/workload-type: web-app
+    apps.tanzu.vmware.com/workload-type: web
 spec:
   source:
     git:
-      # update when code is pushed to a new location
-      url: $GITREPO
+      url: https://github.com/dektlong/devx-mood-backend
       ref:
         branch: main
-  env:
-  - name: TESTVAR
-    value: aoeu
