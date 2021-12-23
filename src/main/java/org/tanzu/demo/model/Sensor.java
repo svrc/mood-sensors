@@ -33,8 +33,6 @@ public class Sensor {
             case 5: this.mood = "Depressed";
         }
         
-        this.team = String.valueOf(doRandom());
-        this.mood = String.valueOf(doRandom());
     }
 
     public Sensor(String team, String mood) {
