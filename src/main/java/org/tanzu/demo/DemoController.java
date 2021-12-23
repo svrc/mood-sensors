@@ -41,7 +41,7 @@ public class DemoController {
     @RequestMapping("/write")
     public @ResponseBody
     Map<String, Object> write() {
-        _sensorRepository.save(new Sensor();
+        _sensorRepository.save(new Sensor());
         return new HashMap<>();
     }
 
