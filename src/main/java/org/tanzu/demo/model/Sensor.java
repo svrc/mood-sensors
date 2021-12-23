@@ -21,7 +21,7 @@ public class Sensor {
         if (teamCode == 1) {
             this.team = "Devs";
         } else if (teamCode == 2) {
-            this.team = "AppOps;
+            this.team = "AppOps";
         } else if (teamCode == 3) {
             this.team = "ITOps";
         }
