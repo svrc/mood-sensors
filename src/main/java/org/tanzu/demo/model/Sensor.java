@@ -36,7 +36,7 @@ public class Sensor {
 
     public Sensor(String team, String mood) {
         this.team = team;
-        this.mood = mod;
+        this.mood = mood;
     }
 
     public int getId() {
