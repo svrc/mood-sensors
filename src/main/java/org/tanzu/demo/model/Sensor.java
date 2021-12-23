@@ -17,24 +17,27 @@ public class Sensor {
 
     public Sensor() {
         
-        switch(doRandom()) {
-            case 1: this.team = "Devs";
-            case 2: this.team = "AppOps";
-            case 3: this.team = "ITOps";
-            case 4: this.team = "Security";
-            case 5: this.team = "DBAs";
+        int teamCode = ThreadLocalRandom.current().nextInt(1, 3);
+        if (teamCode == 1) {
+            this.team = "Devs";
+        } else if (teamCode == 2) {
+            this.team = "AppOps;
+        } else if (teamCode == 3) {
+            this.team = "ITOps";
         }
         
-        switch(doRandom()) {
-            case 1: this.mood = "Happy";
-            case 2: this.mood = "Sad";
-            case 3: this.mood = "Angry";
-            case 4: this.mood = "Scared";
-            case 5: this.mood = "Depressed";
+        int moodCode = ThreadLocalRandom.current().nextInt(1, 5);
+        if (moodCode == 1) {
+            this.mood = "Happy";
+        } else if (moodCode == 2) {
+            this.mood = "Sad";
+        } else if (moodCode == 3) {
+            this.mood = "Angry";
+        } else if (moodCode == 4) {
+            this.mood = "Scared";
+        } else if (moodCode == 5) { 
+            this.mood = "Depressed";
         }
-        
-        this.team = String.valueOf(doRandom());
-        this.mood = String.valueOf(doRandom());
     }
 
     public Sensor(String team, String mood) {
@@ -54,7 +57,4 @@ public class Sensor {
         return mood;
     }
     
-    private int doRandom() {
-        return ThreadLocalRandom.current().nextInt(1, 5);
-    }
 }
