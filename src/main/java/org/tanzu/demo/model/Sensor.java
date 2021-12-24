@@ -17,7 +17,7 @@ public class Sensor {
 
     public Sensor() {
         
-        int teamCode = ThreadLocalRandom.current().nextInt(1, 3);
+        int teamCode = ThreadLocalRandom.current().nextInt(1, 4);
         if (teamCode == 1) {
             this.team = "Devs";
         } else if (teamCode == 2) {
@@ -26,7 +26,7 @@ public class Sensor {
             this.team = "ITOps";
         }
         
-        int moodCode = ThreadLocalRandom.current().nextInt(1, 5);
+        int moodCode = ThreadLocalRandom.current().nextInt(1, 6);
         if (moodCode == 1) {
             this.mood = "Happy";
         } else if (moodCode == 2) {
