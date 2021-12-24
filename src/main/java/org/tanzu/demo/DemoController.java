@@ -45,9 +45,9 @@ public class DemoController {
         return new HashMap<>();
     }
     
-    @RequestMapping("/add-sensor")
-    public @ResponseBody Sensor addSensor() {
-        return new Sensor();
+    @RequestMapping("/sensors-data")
+    public @ResponseBody Iterable<Sensor> sensorsData() {
+        return _sensorRepository.findAll();
     }
 
     private static final String REPLACEMENT_BANNER_TEXT="Tanzu Application Platform Demo";
