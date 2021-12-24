@@ -46,7 +46,7 @@ public class DemoController {
     }
     
     @RequestMapping("/add-sensor")
-    public ResponseBody addSensor() {
+    public @ResponseBody Sensor addSensor() {
         return new Sensor();
     }
 
