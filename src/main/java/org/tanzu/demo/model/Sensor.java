@@ -12,36 +12,36 @@ public class Sensor {
     @Id
     @GeneratedValue
     int id;
-    String team;
+    String type;
     String mood;
 
     public Sensor() {
         
-        int teamCode = ThreadLocalRandom.current().nextInt(1, 4);
-        if (teamCode == 1) {
-            this.team = "Devs";
-        } else if (teamCode == 2) {
-            this.team = "AppOps";
-        } else if (teamCode == 3) {
-            this.team = "ITOps";
+        int rand = ThreadLocalRandom.current().nextInt(1, 4);
+        if (rand == 1) {
+            this.type = "Devs";
+        } else if (rand == 2) {
+            this.type = "AppOps";
+        } else if (rand == 3) {
+            this.type = "ITOps";
         }
         
-        int moodCode = ThreadLocalRandom.current().nextInt(1, 6);
-        if (moodCode == 1) {
+        rand = ThreadLocalRandom.current().nextInt(1, 6);
+        if (rand == 1) {
             this.mood = "Happy";
-        } else if (moodCode == 2) {
+        } else if (rand == 2) {
             this.mood = "Sad";
-        } else if (moodCode == 3) {
+        } else if (rand == 3) {
             this.mood = "Angry";
-        } else if (moodCode == 4) {
+        } else if (rand == 4) {
             this.mood = "Scared";
-        } else if (moodCode == 5) { 
+        } else if (rand == 5) { 
             this.mood = "Depressed";
         }
     }
 
-    public Sensor(String team, String mood) {
-        this.team = team;
+    public Sensor(String type, String mood) {
+        this.type = type;
         this.mood = mood;
     }
 
@@ -49,8 +49,8 @@ public class Sensor {
         return id;
     }
 
-    public String getTeam() {
-        return team;
+    public String getType() {
+        return type;
     }
 
     public String getMood() {
