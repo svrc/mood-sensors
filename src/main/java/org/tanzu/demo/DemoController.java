@@ -48,7 +48,7 @@ public class DemoController {
     @RequestMapping("/add-sensor")
     public String addSensor() {
         Sensor sensor = new Sensor();
-        return "{Sensor_ID:" + String valueOf(sensor.getId()) + ",Type:" + sensor.getType() + ",Mood:" + sensor.getMood() + "}";
+        return "{Sensor_ID:" + String.valueOf(sensor.getId()) + ",Type:" + sensor.getType() + ",Mood:" + sensor.getMood() + "}";
     }
 
     private static final String REPLACEMENT_BANNER_TEXT="Tanzu Application Platform Demo";
