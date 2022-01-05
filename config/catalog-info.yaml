@@ -6,7 +6,7 @@ metadata:
   tags:
     - devx-mood
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood-backend'
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood'
 spec:
   type: service
   lifecycle: experimental
