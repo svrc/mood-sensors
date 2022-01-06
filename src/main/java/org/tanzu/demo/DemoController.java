@@ -33,7 +33,7 @@ public class DemoController {
     @RequestMapping("/")
     public String home(Model model) throws SQLException {
         Connection connection = Objects.requireNonNull(_jdbcTemplate.getDataSource()).getConnection();
-        model.addAttribute("sensorDB", "Mood Sensors Data Store: " + connection.getMetaData().getURL());
+        model.addAttribute("sensorDB", "Mood Sensors Data");// Store: " + connection.getMetaData().getURL());
         connection.close();
         return "index";
     }
