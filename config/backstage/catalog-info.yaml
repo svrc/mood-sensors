@@ -4,7 +4,7 @@ metadata:
   name: devx-mood-sensors
   description: Backend Spring Boot app for the DexMood app
   tags:
-    - devx-mood
+    - devx-mood-app
   annotations:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood-app'
 spec:
