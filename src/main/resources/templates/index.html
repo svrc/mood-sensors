@@ -61,7 +61,7 @@
         $('#headerTitle').text( data.bannerText );
         $('#headerTitle').css( 'color', data.bannerColor );
 
-        var tableHtml = '<table class="table"><thead><tr><th>ID</th><th>' + data.tempHeader + '</th><th>' + data.pressureHeader + '</th></tr></thead><tbody>';
+        var tableHtml = '<table class="table"><thead><tr><th>Sensor ID</th><th>' + data.tempHeader + '</th><th>' + data.pressureHeader + '</th></tr></thead><tbody>';
         for (var index in data.sensors) {
             tableHtml += '<tr><td>' + data.sensors[index].id + '</td><td>' + data.sensors[index].type + '</td><td>' + data.sensors[index].mood + '</td></tr>';
         }
