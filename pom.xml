@@ -12,7 +12,7 @@
     <artifactId>devx-mood-sensors</artifactId>
     <version>0.1</version>
     <name>devx-mood-sensors</name>
-    <description>backend application for the devx-mood app/description>
+    <description>backend application for the devx-mood app</description>
 
     <properties>
         <java.version>11</java.version>
