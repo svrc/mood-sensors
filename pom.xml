@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.tanzu</groupId>
-    <artifactId>sensors</artifactId>
+    <artifactId>devx-mood-sensors</artifactId>
     <version>0.1</version>
-    <name>spring-sensors</name>
-    <description>Sample Spring Database Application</description>
+    <name>devx-mood-sensors</name>
+    <description>backend application for the devx-mood app/description>
 
     <properties>
         <java.version>11</java.version>
