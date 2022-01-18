@@ -9,5 +9,5 @@ metadata:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood'
 spec:
   type: service
-  lifecycle: experimental
-  owner: default-team
+  lifecycle: integration
+  owner: dekt
