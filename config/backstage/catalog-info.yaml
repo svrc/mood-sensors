@@ -3,6 +3,10 @@ kind: Component
 metadata:
   name: mood-sensors
   description: Sensors backend component for the DexMood app
+  tags:
+    - spring-boot
+    - streaming
+    - backend-apis
   annotations:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood'
 links:
