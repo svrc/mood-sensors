@@ -5,8 +5,7 @@ metadata:
   description: Sensors backend component for the DevX Mood app
   tags:
     - spring-boot
-    - streaming
-    - backend-apis
+    - spring-cloud-stream
   annotations:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood-app'
 spec:
