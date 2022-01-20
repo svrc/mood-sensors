@@ -18,4 +18,4 @@ spec:
   lifecycle: integration
   owner: dekt
   system: devx-mood
-  dependsOn: [Resource:sensors-stream-queue]
+  dependsOn: [Resource:rabbitmq-cluster]
