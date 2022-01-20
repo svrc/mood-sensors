@@ -3,6 +3,9 @@ kind: Resource
 metadata:
   name: rabbitmq-cluster
   description: The k8s cluster hosting the RabbitMQ instance
+  tags:
+    - rabbitmq
+    - streaming
   annotations:
     'backstage.io/techdocs-ref': dir:.
 spec:
@@ -15,6 +18,9 @@ kind: Resource
 metadata:
   name: rds-connector
   description: The CRD providing connection to an RDS instance
+  tags:
+    - aws
+    - database
   annotations:
     'backstage.io/techdocs-ref': dir:.
 spec:
