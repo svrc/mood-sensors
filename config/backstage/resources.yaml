@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rabbitmq-cluster
+  description: The k8s cluster hosting the RabbitMQ instance
+  annotations:
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  type: messagebus
+  owner: dekt
+  system: devx-mood-app
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rds-connector
+  description: The CRD providing connection to an RDS instance
+  annotations:
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  type: database
+  owner: dekt
+  system: devx-mood-app
