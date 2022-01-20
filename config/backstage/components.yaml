@@ -8,7 +8,7 @@ metadata:
     - streaming
     - backend-apis
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood'
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood-app'
 links:
     - url: http://mood-sensors.apps.dekt.io/
       title: 'mood-sensors API test portal'
