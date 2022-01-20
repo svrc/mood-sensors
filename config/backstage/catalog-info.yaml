@@ -7,7 +7,6 @@ metadata:
     'backstage.io/techdocs-ref': dir:.
 spec:
   targets:
-    - ./components.yaml
-    - ./systems.yaml
-    - ./resources.yaml
-    - ./domains.yaml
+    - components.yaml
+    - systems.yaml
+    - resources.yaml
