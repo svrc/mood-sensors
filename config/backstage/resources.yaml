@@ -5,7 +5,7 @@ metadata:
   description: The k8s cluster hosting the RabbitMQ instance
   tags:
     - rabbitmq
-    - streaming
+    - messagebus
   annotations:
     'backstage.io/techdocs-ref': dir:.
 spec:
