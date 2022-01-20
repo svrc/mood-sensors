@@ -17,5 +17,7 @@ spec:
   type: service
   lifecycle: integration
   owner: dekt
-  system: devx-mood
-  dependsOn: [Resource:rabbitmq-cluster]
+  system: devx-mood-app
+  dependsOn: 
+    - resource:rds-connector
+    - resource:rabbitmq-cluster
