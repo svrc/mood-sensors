@@ -8,6 +8,6 @@ metadata:
 spec:
   targets:
     - ./components.yaml
-    - ./systems/systems.yaml
+    - ./systems.yaml
     - ./resources.yaml
     - ./domains.yaml
