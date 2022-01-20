@@ -18,20 +18,4 @@ spec:
   lifecycle: integration
   owner: dekt
   system: devx-mood
-  dependsOn: [Component:sensors-stream]
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: sensors-stream
-  description: Sensors streams storage for the DexMood app
-  tags:
-    - rabbitmq
-    - streaming
-  annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood'
-spec:
-  type: service
-  lifecycle: integration
-  owner: dekt
-  system: devx-mood
+  dependsOn: [Resource:sensors-stream-queue]
