@@ -2,8 +2,17 @@
 
 An app to demonstrate the use of TAP supply chain with src, test,scan and url
 
-Make sure you have TAP install with ```full profile``` and the ```ootb_supply_chain_testing_scanning``` is included
+Make sure you have TAP 
 
-Steps:
+## Setup
+
+- install TAP with ```full profile``` and ```ootb_supply_chain_testing_scanning``` included
+- kapp -y deploy --app rmq-operator --file https://github.com/rabbitmq/cluster-operator/releases/download/v1.9.0/cluster-operator.yml
+- kubectl apply -f supplychain -n YOUR_TAP_DEV_NS
+
+## deploy the workload
+
+tanzu apps workload create -f workload.yaml -n YOUR_TAP_DEV_NS
+
 
 
