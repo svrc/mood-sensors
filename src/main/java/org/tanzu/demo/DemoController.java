@@ -38,14 +38,14 @@ public class DemoController {
         return "index";
     }
 
-    @RequestMapping("/write")
+    @RequestMapping("/measure-mood")
     public @ResponseBody
     Map<String, Object> write() {
         _sensorRepository.save(new Sensor());
         return new HashMap<>();
     }
     
-    @RequestMapping("/sensors-data")
+    @RequestMapping("/read-mood")
     public @ResponseBody Iterable<Sensor> sensorsData() {
         return _sensorRepository.findAll();
     }
