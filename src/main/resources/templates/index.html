@@ -23,7 +23,7 @@
             <form class="form-horizontal">
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-4">
-                        <button type="button" id="writeButton" class="btn btn-primary">/write API&nbsp;&nbsp;<i
+                        <button type="button" id="writeButton" class="btn btn-primary">/measure-mood&nbsp;&nbsp;<i
                                 class="fa fa-toggle-up"></i></button>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 </div>
                 <div id="mapValues" class="panel-body"></div>
             </div>
-            <button type="button" id="refreshButton" class="btn btn-primary">/sensors-data API&nbsp;&nbsp;<i
+            <button type="button" id="refreshButton" class="btn btn-primary">/read-mood&nbsp;&nbsp;<i
                     class="fa fa-refresh"></i></button>
         </div>
     </div>
@@ -47,7 +47,7 @@
     /*<![CDATA[*/
     var writeUrl = [[@{/write}]];
         $('#writeButton').click(function () {
-            $.getJSON('/write').done(refresh);
+            $.getJSON('/measure-mood').done(refresh);
         });
     $('#refreshButton').click(refresh);
 
