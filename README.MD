@@ -8,12 +8,12 @@ Make sure you have TAP
 
 - install TAP with ```full profile``` and ```ootb_supply_chain_testing_scanning``` included
 - Update ```UPDATE_ME``` values in ```supplychain/dekt-path2prod.yaml``` to match the ```registy.server``` and ```registry.repository``` values in your ```tap-values.yaml```
-- kapp -y deploy --app rmq-operator --file https://github.com/rabbitmq/cluster-operator/releases/download/v1.9.0/cluster-operator.yml
-- kubectl apply -f supplychain -n YOUR_TAP_DEV_NS
+- run ```kapp -y deploy --app rmq-operator --file https://github.com/rabbitmq/cluster-operator/releases/download/v1.9.0/cluster-operator.yml```
+- run ```kubectl apply -f supplychain -n YOUR_TAP_DEV_NS```
 
 ## deploy the workload
 
-tanzu apps workload create -f workload.yaml -n YOUR_TAP_DEV_NS
+```tanzu apps workload create -f workload.yaml -n YOUR_TAP_DEV_NS```
 
 
 
