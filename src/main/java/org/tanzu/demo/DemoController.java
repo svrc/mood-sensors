@@ -49,8 +49,6 @@ public class DemoController {
         return _sensorRepository.findAll();
     }
 
-    private static final String REPLACEMENT_BANNER_TEXT="Tanzu Application Platform Demo";
-
     @RequestMapping("/refresh")
     public @ResponseBody SensorData refresh() {
         SensorData result = new SensorData( _sensorRepository.findAll(), _webProperties.getTempHeader(),
