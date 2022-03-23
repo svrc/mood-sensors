@@ -6,8 +6,9 @@ Make sure you have TAP
 
 ## Setup
 
-- install TAP with ```full profile``` and ```ootb_supply_chain_testing_scanning``` included
-- Update ```UPDATE_ME``` values in ```supplychain/dekt-path2prod.yaml``` to match the ```registy.server``` and ```registry.repository``` values in your ```tap-values.yaml```
+- install TAP with ```full profile``` 
+- Update ```UPDATE_ME``` values in ```supplychain/dekt-path2prod.yaml``` to any image repo accesisble from the this cluster
+  - note: if this repo requires authentication and is differenet than the one in the ooot-supplchain, you will need to add a secret as well
 - run 
 ```
 kapp -y deploy --app rmq-operator --file https://github.com/rabbitmq/cluster-operator/releases/download/v1.9.0/cluster-operator.yml
