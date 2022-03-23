@@ -15,5 +15,22 @@ Make sure you have TAP
 
 ```tanzu apps workload create -f workload.yaml -n YOUR_TAP_DEV_NS```
 
+## Track progess
 
+```
+tanzu apps cluster-supply-chain list
+
+tanzu apps workload get sensors -n YOUR_TAP_DEV_NS
+
+kubectl tree workload sensors -n YOUR_TAP_DEV_NS
+
+kubectl describe imagescan.scanning.apps.tanzu.vmware.com/sensors -n YOUR_TAP_DEV_NS
+
+tanzu apps workload tail sensors --since 100m --timestamp  -n YOUR_TAP_DEV_NS
+
+kc get ServiceBinding -n YOUR_TAP_DEV_NS
+```
+
+### Register workload entity in TAP GUI
+https://github.com/dektlong/_DevXD
 
