@@ -9,8 +9,8 @@ spec:
     default isCompliant = false
 
     # Accepted Values: "Critical", "High", "Medium", "Low", "Negligible", "UnknownSeverity"
-    violatingSeverities := []
     #violatingSeverities := ["Critical","High","UnknownSeverity"]
+    violatingSeverities := ["High","UnknownSeverity"]
     ignoreCVEs := []
 
     contains(array, elem) = true {
