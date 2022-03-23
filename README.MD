@@ -11,7 +11,7 @@ Make sure you have TAP
 - run ```kapp -y deploy --app rmq-operator --file https://github.com/rabbitmq/cluster-operator/releases/download/v1.9.0/cluster-operator.yml```
 - run ```kubectl apply -f supplychain -n YOUR_TAP_DEV_NS```
 
-## deploy the workload
+## Deploy the sensors workload
 
 ```tanzu apps workload create -f workload.yaml -n YOUR_TAP_DEV_NS```
 
