@@ -28,15 +28,15 @@ spec:
     templateRef:
       kind: ClusterSourceTemplate
       name: source-template
-  #- name: deliverable
-  #  params:
-  #  - name: registry
-  #    value:
-  #      repository: dekt-apps
-  #      server: harbor.apps.cf.tanzutime.com
-  #  templateRef:
-  #    kind: ClusterTemplate
-  #    name: deliverable-template
+  - name: deliverable
+    params:
+    - name: registry
+      value:
+        repository: UPDATE_ME
+        server: UPDATE_ME
+    templateRef:
+      kind: ClusterTemplate
+      name: deliverable-template
   - name: source-tester
     sources:
     - name: source
@@ -57,10 +57,10 @@ spec:
       value: default
     - name: clusterBuilder
       value: default
-    #- name: registry
-    #  value:
-    #    repository: dekt-apps
-    #    server: harbor.apps.cf.tanzutime.com
+    - name: registry
+      value:
+        repository: UPDATE_ME
+        server: UPDATE_ME
     sources:
     - name: source
       resource: source-scanner
@@ -98,10 +98,10 @@ spec:
     params:
     - name: serviceAccount
       value: default
-    #- name: registry
-    #  value:
-    #    repository: dekt-apps
-    #    server: harbor.apps.cf.tanzutime.com
+    - name: registry
+      value:
+        repository: UPDATE_ME
+        server: UPDATE_ME
     templateRef:
       kind: ClusterTemplate
       name: config-writer-template
