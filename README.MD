@@ -7,7 +7,7 @@ Make sure you have TAP
 ## Setup
 
 - install TAP with ```full profile``` and ```ootb_supply_chain_testing_scanning``` included
-- Update ```UPDATE_ME``` values in the custom supplychain ```supplychain/dekt-path2prod.yaml``` to match the repository and registry values in your ```tap-values.yaml```
+- Update ```UPDATE_ME``` values in the custom supplychain ```supplychain/dekt-path2prod.yaml``` to match the ```registy.server``` and ```registry.repository``` values in your ```tap-values.yaml```
 - kapp -y deploy --app rmq-operator --file https://github.com/rabbitmq/cluster-operator/releases/download/v1.9.0/cluster-operator.yml
 - kubectl apply -f supplychain -n YOUR_TAP_DEV_NS
 
