@@ -13,7 +13,9 @@ Make sure you have TAP
 
 ## Deploy the sensors workload
 
-```tanzu apps workload create -f workload.yaml -n YOUR_TAP_DEV_NS```
+```
+tanzu apps workload create -f workload.yaml -n YOUR_TAP_DEV_NS
+```
 
 ## Track progess
 
@@ -32,5 +34,7 @@ kc get ServiceBinding -n YOUR_TAP_DEV_NS
 ```
 
 ### Register workload entity in TAP GUI
-https://github.com/dektlong/_DevXD
+```
+https://github.com/dektlong/mood-sensors/blob/main/catalog-info.yaml
+```
 
