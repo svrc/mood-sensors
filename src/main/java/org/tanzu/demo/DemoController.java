@@ -1,5 +1,11 @@
 package org.tanzu.demo;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -10,13 +16,6 @@ import org.tanzu.demo.config.WebProperties;
 import org.tanzu.demo.model.Sensor;
 import org.tanzu.demo.model.SensorData;
 import org.tanzu.demo.model.SensorRepository;
-
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Random;
 
 @Controller
 public class DemoController {
@@ -38,14 +37,14 @@ public class DemoController {
         return "index";
     }
 
-    @RequestMapping("/measure-mood")
+    @RequestMapping("/activate")
     public @ResponseBody
     Map<String, Object> write() {
         _sensorRepository.save(new Sensor());
         return new HashMap<>();
     }
     
-    @RequestMapping("/read-mood")
+    @RequestMapping("/measure")
     public @ResponseBody Iterable<Sensor> sensorsData() {
         return _sensorRepository.findAll();
     }
