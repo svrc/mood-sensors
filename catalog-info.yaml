@@ -1,0 +1,61 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sensors
+  description: Sensors backend api for the DevX Mood app
+  tags:
+    - spring-boot
+    - spring-cloud-stream
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=devx-mood'
+spec:
+  type: service
+  lifecycle: integration
+  owner: dekt-dev-team
+  system: devx-mood
+  dependsOn: 
+    - resource:reading
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: mood-sensors-api
+  description: APIs to interact with the mood-sensors component
+spec:
+  type: openapi
+  lifecycle: integration
+  owner: dekt-dev-team2
+  system: devx-mood
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Mood Sensors APIs
+    servers:
+      - url: mood-sensors.apps.dekt.io/v1
+    paths:
+      /measure-mood:
+        post:
+          summary: measure mood via a sensor
+        tags:
+            - sensors-update
+      /read-mood:
+        get:
+          summary: retrieve all mood information
+        tags:
+            - sensors-reading
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: reading
+  description: A RabbitMQ resource to store sensors' real-time reading
+  tags:
+    - rabbitmq
+    - messagebus
+  annotations:
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  type: messagebus
+  owner: dev-team
+  system: devx-mood
