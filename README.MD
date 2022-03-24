@@ -33,7 +33,7 @@ tanzu apps workload get mood-sensors -n YOUR_TAP_DEV_NS
 
 kubectl tree workload mood-sensors -n YOUR_TAP_DEV_NS
 
-kubectl describe imagescan.scanning.apps.tanzu.vmware.com/sensors -n YOUR_TAP_DEV_NS
+kubectl describe imagescan.scanning.apps.tanzu.vmware.com/mood-sensors -n YOUR_TAP_DEV_NS
 
 tanzu apps workload tail mood-sensors --since 100m --timestamp  -n YOUR_TAP_DEV_NS
 
