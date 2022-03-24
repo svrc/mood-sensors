@@ -18,7 +18,7 @@ spec:
     paths:
       /activate:
         post:
-          summary: measure mood via a sensor
+          summary: activate a sensor
         tags:
             - sensors-update
       /measure:
