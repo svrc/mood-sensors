@@ -7,7 +7,7 @@ Make sure you have TAP
 ## Setup
 
 - install TAP with ```full profile``` 
-- Update ```UPDATE_ME``` values in ```config/dekt-path2prod.yaml``` to any image repo accessible from the this cluster
+- Update ```UPDATE_ME``` values in ```config/dekt-path2prod.yaml``` to any image repo accessible from this cluster
   - note: if this repo requires authentication and is differenet than the one in the ooot-supplchain, you will need to add a secret as well
 - Install the rabbitmq operator 
 ```
