@@ -42,6 +42,6 @@ kc get ServiceBinding -n YOUR_TAP_DEV_NS
 
 ### Register workload entity in TAP GUI
 ```
-https://github.com/dektlong/mood-sensors/blob/main/catalog-info.yaml
+https://github.com/dektlong/mood-sensors/blob/main/backstage/catalog-info.yaml
 ```
 
