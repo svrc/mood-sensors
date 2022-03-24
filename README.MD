@@ -15,7 +15,7 @@ kapp -y deploy --app rmq-operator --file https://github.com/rabbitmq/cluster-ope
 ```
 - Apply the custom supplychain, policies and rabbit instance
 ```
-kubectl apply -f config -n YOUR_TAP_DEV_NS
+kubectl apply -f config/tap -n YOUR_TAP_DEV_NS
 ```
 
 ## Deploy the mood-sensors workload
@@ -42,6 +42,6 @@ kc get ServiceBinding -n YOUR_TAP_DEV_NS
 
 ### Register workload entity in TAP GUI
 ```
-https://github.com/dektlong/mood-sensors/blob/main/backstage/catalog-info.yaml
+https://github.com/dektlong/mood-sensors/blob/main/config/backstage/catalog-info.yaml
 ```
 
