@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: devx-mood-app-info
-  description: A catalog for the DevX Mood application
+  name: devx-sensors-info
+  description: A catalog for mood-sensor microservice
   annotations:
     'backstage.io/techdocs-ref': dir:.
 spec:
