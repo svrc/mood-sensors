@@ -1,15 +1,15 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='harbor.apps.cf.tanzutime.com/dekt-apps/sensors')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='harbor.apps.cf.tanzutime.com/dekt-apps/mood-sensors-dev')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='dekt-apps')
 
 k8s_custom_deploy(
-    'sensors',
+    'mood-sensors',
     apply_cmd="tanzu apps workload apply -f workload.yaml --live-update" +
                " --local-path " + LOCAL_PATH +
                " --source-image " + SOURCE_IMAGE +
                " --namespace " + NAMESPACE +
                " --yes >/dev/null" +
-               " && kubectl get workload sensors --namespace " + NAMESPACE + " -o yaml",
+               " && kubectl get workload mood-sensors --namespace " + NAMESPACE + " -o yaml",
     delete_cmd="tanzu apps workload delete -f workload.yaml --namespace " + NAMESPACE + " --yes",
     deps=['pom.xml', './target/classes'],
     container_selector='workload',
@@ -20,5 +20,5 @@ k8s_custom_deploy(
 
 #allow_k8s_contexts('dekt-aks')
 
-k8s_resource('sensors', port_forwards=["8080:8080"],
-            extra_pod_selectors=[{'serving.knative.dev/service': 'sensors'}])
+k8s_resource('mood-sensors', port_forwards=["8080:8080"],
+            extra_pod_selectors=[{'serving.knative.dev/service': 'mood-sensors'}])
