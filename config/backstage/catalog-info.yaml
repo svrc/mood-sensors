@@ -11,6 +11,3 @@ spec:
     - ./components/mood-sensors.yaml
     - ./resources/reading.yaml
     - ./resources/inventory.yaml
-    - ./systems/devx-mood.yaml
-    - ./groups/dekt-teams.yaml
-    - ./domains/dekt-domain.yaml
