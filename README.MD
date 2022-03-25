@@ -2,11 +2,13 @@
 
 An app to demonstrate the use of TAP supply chain with src, test,scan and url
 
-Make sure you have TAP 
-
 ## Setup
 
 - install TAP with ```full profile``` 
+  - for local installation with Minikube, follow instructions here
+  ```
+  https://tanzu.vmware.com/developer/guides/tanzu-application-platform-local-devloper-install/
+  ```
 - Update ```UPDATE_ME``` values in ```config/dekt-path2prod.yaml``` to any image repo accessible from this cluster
   - note: if this repo requires authentication and is differenet than the one in the ooot-supplchain, you will need to add a secret as well
 - Install the rabbitmq operator 
