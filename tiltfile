@@ -18,7 +18,7 @@ k8s_custom_deploy(
     ]
 )
 
-allow_k8s_contexts('dekt-aks')
+#allow_k8s_contexts('dekt-aks')
 
 k8s_resource('sensors', port_forwards=["8080:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': 'sensors'}])
