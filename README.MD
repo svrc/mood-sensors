@@ -20,6 +20,13 @@ kapp -y deploy --app rmq-operator --file https://github.com/rabbitmq/cluster-ope
 kubectl apply -f config/tap -n YOUR_TAP_DEV_NS
 ```
 
+## IDE dev plugin setup
+```
+minikube start 
+
+tilt up
+```
+
 ## Deploy the mood-sensors workload
 
 ```
