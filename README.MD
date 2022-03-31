@@ -47,3 +47,10 @@ kc get ServiceBinding -n YOUR_TAP_DEV_NS
 https://github.com/dektlong/mood-sensors/blob/main/config/backstage/catalog-info.yaml
 ```
 
+## Local development
+
+Install tap 'interate' profile
+
+```
+tilt up
+```
