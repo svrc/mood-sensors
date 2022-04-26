@@ -2,7 +2,29 @@
 
 An app to demonstrate the use of TAP supply chain with src, test,scan and url
 
-## Setup
+## Deploy the mood-sensors workload
+
+```
+tanzu apps workload create -f workload.yaml -n YOUR_TAP_DEV_NS
+```
+
+## Track workload progess
+
+```
+tanzu apps cluster-supply-chain list
+
+tanzu apps workload get mood-sensors -n YOUR_TAP_DEV_NS
+
+kubectl tree workload mood-sensors -n YOUR_TAP_DEV_NS
+
+kubectl describe imagescan.scanning.apps.tanzu.vmware.com/mood-sensors -n YOUR_TAP_DEV_NS
+
+tanzu apps workload tail mood-sensors --since 100m --timestamp  -n YOUR_TAP_DEV_NS
+
+kc get ServiceBinding -n YOUR_TAP_DEV_NS
+```
+
+## TAP Setup
 
 - install TAP with ```full profile``` 
   - for local installation with Minikube, follow instructions here
@@ -20,27 +42,6 @@ kapp -y deploy --app rmq-operator --file https://github.com/rabbitmq/cluster-ope
 kubectl apply -f config/tap -n YOUR_TAP_DEV_NS
 ```
 
-## Deploy the mood-sensors workload
-
-```
-tanzu apps workload create -f workload.yaml -n YOUR_TAP_DEV_NS
-```
-
-## Track progess
-
-```
-tanzu apps cluster-supply-chain list
-
-tanzu apps workload get mood-sensors -n YOUR_TAP_DEV_NS
-
-kubectl tree workload mood-sensors -n YOUR_TAP_DEV_NS
-
-kubectl describe imagescan.scanning.apps.tanzu.vmware.com/mood-sensors -n YOUR_TAP_DEV_NS
-
-tanzu apps workload tail mood-sensors --since 100m --timestamp  -n YOUR_TAP_DEV_NS
-
-kc get ServiceBinding -n YOUR_TAP_DEV_NS
-```
 
 ### Register workload entity in TAP GUI
 ```
