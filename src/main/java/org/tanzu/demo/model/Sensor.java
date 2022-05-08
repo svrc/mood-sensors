@@ -36,7 +36,7 @@ public class Sensor {
         } else if (rand == 4) {
             this.mood = "Scared";
         } else if (rand == 5) { 
-            this.mood = "Depressed";
+            this.mood = "N/A";
         }
     }
 
