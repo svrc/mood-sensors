@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.tanzu</groupId>
-    <artifactId>mood-sensors</artifactId>
+    <artifactId>mysensors</artifactId>
     <version>0.1</version>
-    <name>mood-sensors</name>
+    <name>mysensors</name>
     <description>backend application for the devx-mood app</description>
 
     <properties>
