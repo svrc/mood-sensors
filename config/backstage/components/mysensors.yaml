@@ -12,7 +12,7 @@ spec:
   type: service
   lifecycle: development
   owner: dekt-dev-team2
-  system: devx-mood
+  system: mymood
   dependsOn: 
     - resource:inventory
     - resource:reading

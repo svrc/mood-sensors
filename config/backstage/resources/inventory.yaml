@@ -10,5 +10,5 @@ metadata:
     'backstage.io/techdocs-ref': dir:.
 spec:
   type: database
-  owner: dekt-platform-ops
-  system: devx-mood
+  owner: dekt-app-ops
+  system: mymood
