@@ -9,5 +9,5 @@ spec:
   targets:
     - ./apis/mysensors-apis.yaml
     - ./components/mysensors.yaml
-    - ./resources/reading.yaml
-    - ./resources/inventory.yaml
+    - ./resources/myreading.yaml
+    - ./resources/myinventory.yaml
