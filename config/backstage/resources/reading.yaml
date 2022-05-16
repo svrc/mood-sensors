@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: myreading
+  name: reading
   description: A RabbitMQ resource to store sensors' real-time reading
   tags:
     - rabbitmq
@@ -11,4 +11,4 @@ metadata:
 spec:
   type: messagebus
   owner: dekt-app-ops
-  system: mymood
+  system: devx-mood

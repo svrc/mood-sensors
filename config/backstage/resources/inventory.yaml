@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: myinventory
+  name: inventory
   description: An in memory resource to simulate sensors' inventory
   tags:
     - in memory
@@ -10,4 +10,4 @@ metadata:
 spec:
   type: database
   owner: dekt-app-ops
-  system: mymood
+  system: devx-mood

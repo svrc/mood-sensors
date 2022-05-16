@@ -1,13 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: mysensors-api
+  name: mood-sensors-api
   description: APIs to interact with the mood-sensors component
 spec:
   type: openapi
   lifecycle: development
   owner: dekt-dev-team2
-  system: mymood
+  system: dev-mood
   definition: |
     openapi: "3.0.0"
     info:
