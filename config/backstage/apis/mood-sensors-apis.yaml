@@ -7,7 +7,7 @@ spec:
   type: openapi
   lifecycle: development
   owner: dekt-dev-team2
-  system: dev-mood
+  system: devx-mood
   definition: |
     openapi: "3.0.0"
     info:
