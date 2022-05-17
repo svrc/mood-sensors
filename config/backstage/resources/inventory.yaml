@@ -4,7 +4,7 @@ metadata:
   name: inventory
   description: An in memory resource to simulate sensors' inventory
   tags:
-    - in memory
+    - cloud-db
   annotations:
     'backstage.io/techdocs-ref': dir:.
 spec:
