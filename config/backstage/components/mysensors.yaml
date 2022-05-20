@@ -14,3 +14,4 @@ spec:
   owner: dekt-dev-team2
   dependsOn: 
     - resource:reading
+    - resource:mysensors-apis
