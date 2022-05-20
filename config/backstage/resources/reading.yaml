@@ -10,5 +10,4 @@ metadata:
     'backstage.io/techdocs-ref': dir:.
 spec:
   type: messagebus
-  owner: dekt-app-ops
-  system: devx-mood
+  owner: dekt-dev-team2
