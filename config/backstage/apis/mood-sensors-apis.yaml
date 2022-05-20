@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: mysensors-api
-  description: APIs to interact with the mood-sensors component
+  name: mood-sensors-apis
+  description: APIs published by the mood-sensors component
 spec:
   type: openapi
   lifecycle: development

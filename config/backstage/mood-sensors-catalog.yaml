@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: mood-sensors-info
+  description: A catalog for mood-sensor microservice
+  annotations:
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  targets:
+    - ./apis/mood-sensors-apis.yaml
+    - ./components/mood-sensors.yaml
+    - ./resources/reading.yaml
+    - ./resources/inventory.yaml
