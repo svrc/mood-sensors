@@ -10,4 +10,4 @@ metadata:
     'backstage.io/techdocs-ref': dir:.
 spec:
   type: messagebus
-  owner: dekt-dev-team2
+  owner: dekt-platform-ops

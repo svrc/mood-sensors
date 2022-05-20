@@ -14,3 +14,6 @@ spec:
   owner: dekt-dev-team2
   dependsOn: 
     - resource:reading
+  providesApis:
+    - mood-sensors-apis
+  
