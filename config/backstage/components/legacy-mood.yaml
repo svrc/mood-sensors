@@ -6,13 +6,10 @@ metadata:
 spec:
   type: service
   lifecycle: integration
-  owner: dekt-app-ops
+  owner: dekt-dev-team2
   system: devx-mood
   dependsOn: 
     - resource:brownfield-gns
-  providesApis:
-    - datacheck-apis
-    - sentiment-apis
   subcomponentOf:
     - mood-sensors
   
