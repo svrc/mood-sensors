@@ -8,6 +8,6 @@ spec:
   lifecycle: integration
   owner: dekt-dev-team2
   system: devx-mood
+  subcomponentOf: mood-sensors
   dependsOn: 
     - resource:brownfield-gns
-  #subcomponentOf: mood-sensors
