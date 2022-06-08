@@ -18,3 +18,6 @@ spec:
     - resource:reading
   providesApis:
     - mood-sensors-apis
+  consumesApis:
+    - datacheck-apis
+    - sentiment-apis
