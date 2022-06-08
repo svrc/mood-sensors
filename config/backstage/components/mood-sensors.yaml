@@ -16,8 +16,6 @@ spec:
   dependsOn: 
     - resource:inventory
     - resource:reading
+    - component:legacy-mood
   providesApis:
     - mood-sensors-apis
-  consumesApis:
-    - datacheck-apis
-    - sentiment-apis
