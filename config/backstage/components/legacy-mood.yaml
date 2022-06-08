@@ -11,3 +11,6 @@ spec:
   subcomponentOf: mood-sensors
   dependsOn: 
     - resource:brownfield-gns
+  consumesApis:
+    - datacheck-apis
+    - sentiment-apis
