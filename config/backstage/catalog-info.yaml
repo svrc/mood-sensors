@@ -10,5 +10,6 @@ spec:
     - ./apis/mood-sensors-apis.yaml
     - ./components/mysensors.yaml
     - ./components/mood-sensors.yaml
+    - ./components/legacy-mood.yaml
     - ./resources/reading.yaml
     - ./resources/inventory.yaml
