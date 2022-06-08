@@ -12,4 +12,3 @@ spec:
     - resource:brownfield-gns
   subcomponentOf:
     - mood-sensors
-  
