@@ -10,5 +10,4 @@ spec:
   system: devx-mood
   dependsOn: 
     - resource:brownfield-gns
-  subcomponentOf:
-    - mood-sensors
+  subcomponentOf: mood-sensors
