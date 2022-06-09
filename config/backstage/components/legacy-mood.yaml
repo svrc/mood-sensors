@@ -10,7 +10,7 @@ spec:
   system: devx-mood
   subcomponentOf: mood-sensors
   dependsOn: 
-    - resource:brownfield-gns
+    - resource:brownfield
   consumesApis:
     - datacheck-apis
     - sentiment-apis
