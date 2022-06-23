@@ -15,7 +15,7 @@ spec:
       description: APIs exposed by the mood-sensors component
       version: '0.1'
     servers:
-      - url: http://mood-sensors.prod.dekt.io
+      - url: http://mood-sensors.dev.dekt.io
     paths:
       /activate-sensor
         post:
