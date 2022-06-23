@@ -44,7 +44,7 @@ paths:
       - "application/json"
       responses:
         200:
-          description: "successful sensor activation"
+          description: "successful sensors activation"
         400:
           description: "Invalid sensor activation"
   /measure/{sensorsID}:
@@ -63,9 +63,7 @@ paths:
         format: "int64"
       responses:
         200:
-          description: "successful operation"
-          schema:
-            type: "array"
+          description: "successful sensor measurement"
         400:
           description: "Invalid sensor data"
   /measure:
@@ -77,8 +75,6 @@ paths:
       - "application/json"
       responses:
         200:
-          description: "successful operation"
-          schema:
-            type: "array"
+          description: "successful sensors measurements"
         400:
           description: "Invalid sensor data"
