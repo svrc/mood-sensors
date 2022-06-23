@@ -4,17 +4,18 @@ info:
   description: "Swagger API definition for the mood-sensor component"
   version: "0.0.2"
   title: "Mood Sensors"
-basePath: "http://mood-sensors.dev.dekt.io"
+host: "mood-sensors.dev.dekt.io"
+basePath: "/"
 tags:
 - name: "activate"
   description: "Activate sensors"
 - name: "measure"
   description: "Measure sensors data"
 schemes:
-- "https"
 - "http"
+- "https"
 paths:
-  /activate/{sensorsID}:
+  activate/{sensorsID}:
     post:
       tags:
       - "activate"
@@ -35,7 +36,7 @@ paths:
           description: "successful sensor activation"
         400:
           description: "Invalid sensor activation"
-  /activate:
+  activate:
     post:
       tags:
       - "activate"
@@ -47,7 +48,7 @@ paths:
           description: "successful sensor activation"
         400:
           description: "Invalid sensor activation"
-  /measure/{sensorsID}:
+  measure/{sensorsID}:
     get:
       tags:
       - "measure"
@@ -68,7 +69,7 @@ paths:
             type: "array"
         400:
           description: "Invalid sensor data"
-  /measure:
+  measure:
     get:
       tags:
       - "measure"
