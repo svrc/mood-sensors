@@ -9,20 +9,67 @@ spec:
   owner: dekt-dev-team2
   system: devx-mood
   definition: |
-    openapi: "3.0.0"
+    openapi: 3.0.1
     info:
-      version: 1.0.0
-      title: Mood Sensors APIs
+      title: mood-sensors APIs
+      description: APIs exposed by the mood-sensors component
+      version: '0.1'
     servers:
-      - url: mood-sensors.prod.dekt.io/
+      - url: http://mood-sensors.prod.dekt.io
     paths:
-      /activate:
+      /activate-sensor
         post:
-          summary: activate a sensor
-        tags:
-            - sensors-update
-      /measure:
+          description: Activate a single mood sensor
+          parameters:
+            - name: mood-sensor-id
+              in: query
+              schema:
+                type: number
+              example: 2
+          responses:
+            '200':
+              description: mood-sensor activated
+              content:
+                application/json; charset=utf-8:
+                  schema:
+                    type: string
+                  examples: {}  
+      /activate
+        post:
+          description: Activate all mood sensors
+          responses:
+            '200':
+              description: all mood-sensors activated
+              content:
+                application/json; charset=utf-8:
+                  schema:
+                    type: string
+                  examples: {}  
+      /measure-sensor
         get:
-          summary: retrieve all mood information
-        tags:
-            - sensors-reading
+          description: Read mood status from a single mood sensor
+          parameters:
+            - name: mood-sensor-id
+              in: query
+              schema:
+                type: number
+              example: 2
+          responses:
+            '200':
+              description: mood status data from a single sensor
+              content:
+                application/json; charset=utf-8:
+                  schema:
+                    type: string
+                  examples: {"id":2,"type":"Devs","mood":"Happy"}  
+      /measure
+        post:
+          description: Read mood status from all mood sensor
+          responses:
+            '200':
+              description: mood status data from all sensors
+              content:
+                application/json; charset=utf-8:
+                  schema:
+                    type: string
+                  examples: {{"id":2,"type":"AppOps","mood":"Scared"},{"id":3,"type":"AppOps","mood":"Angry"},{"id":4,"type":"ITOps","mood":"Sad"},{"id":5,"type":"AppOps","mood":"Happy"} }
