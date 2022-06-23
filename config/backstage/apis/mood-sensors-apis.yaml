@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: mood-sensors-apis
-  description: APIs published by the mood-sensors component
+  name: mood-sensors-api
+  description: APIs to interact with the mood-sensors component
 spec:
   type: openapi
   lifecycle: development
@@ -11,65 +11,18 @@ spec:
   definition: |
     openapi: "3.0.0"
     info:
-      title: mood-sensors APIs
-      description: APIs exposed by the mood-sensors component
-      version: '0.1'
+      version: 1.0.0
+      title: Mood Sensors APIs
     servers:
-      - url: http://mood-sensors.dev.dekt.io
+      - url: mood-sensors.apps.dekt.io/v1
     paths:
-      /activate-sensor
+      /activate:
         post:
-          description: Activate a single mood sensor
-          parameters:
-            - name: mood-sensor-id
-              in: query
-              schema:
-                type: number
-              example: 2
-          responses:
-            '200':
-              description: mood-sensor activated
-              content:
-                application/json; charset=utf-8:
-                  schema:
-                    type: string
-                  examples: {}  
-      /activate
-        post:
-          description: Activate all mood sensors
-          responses:
-            '200':
-              description: all mood-sensors activated
-              content:
-                application/json; charset=utf-8:
-                  schema:
-                    type: string
-                  examples: {}  
-      /measure-sensor
+          summary: activate a sensor
+        tags:
+            - sensors-update
+      /measure:
         get:
-          description: Read mood status from a single mood sensor
-          parameters:
-            - name: mood-sensor-id
-              in: query
-              schema:
-                type: number
-              example: 2
-          responses:
-            '200':
-              description: mood status data from a single sensor
-              content:
-                application/json; charset=utf-8:
-                  schema:
-                    type: string
-                  examples: {"id":2,"type":"Devs","mood":"Happy"}  
-      /measure
-        get:
-          description: Read mood status from all mood sensor
-          responses:
-            '200':
-              description: mood status data from all sensors
-              content:
-                application/json; charset=utf-8:
-                  schema:
-                    type: string
-                  examples: {{"id":2,"type":"AppOps","mood":"Scared"},{"id":3,"type":"AppOps","mood":"Angry"},{"id":4,"type":"ITOps","mood":"Sad"},{"id":5,"type":"AppOps","mood":"Happy"} }
+          summary: retrieve all mood information
+        tags:
+            - sensors-reading
