@@ -9,7 +9,7 @@ spec:
   owner: dekt-dev-team2
   system: devx-mood
   definition: |
-    openapi: 3.0.1
+    openapi: 3.0.0
     info:
       title: mood-sensors APIs
       description: APIs exposed by the mood-sensors component
@@ -63,7 +63,7 @@ spec:
                     type: string
                   examples: {"id":2,"type":"Devs","mood":"Happy"}  
       /measure
-        post:
+        get:
           description: Read mood status from all mood sensor
           responses:
             '200':
