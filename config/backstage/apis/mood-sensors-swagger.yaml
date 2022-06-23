@@ -51,7 +51,7 @@ paths:
     get:
       tags:
       - "measure"
-      summary: "Measure a mood status of a given sensors"
+      summary: "measure the mood status from a given sensors"
       produces:
       - "application/json"
       parameters:
@@ -72,7 +72,7 @@ paths:
     get:
       tags:
       - "measure"
-      summary: "Measure a mood status of all sensors"
+      summary: "measure the mood status from all sensors"
       produces:
       - "application/json"
       responses:
