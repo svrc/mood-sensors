@@ -14,7 +14,7 @@ spec:
       version: 1.0.0
       title: Mood Sensors APIs
     servers:
-      - url: mood-sensors.apps.dekt.io/v1
+      - url: http://mood-sensors.dev.dekt.io
     paths:
       /activate:
         post:
