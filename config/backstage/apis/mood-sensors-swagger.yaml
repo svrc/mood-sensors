@@ -5,7 +5,7 @@ info:
   version: "0.0.2"
   title: "Mood Sensors"
 host: "mood-sensors.dev.dekt.io"
-basePath: "/api"
+#basePath: "/api"
 tags:
 - name: "activate"
   description: "Activate sensors"
