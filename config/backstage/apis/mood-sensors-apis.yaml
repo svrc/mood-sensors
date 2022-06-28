@@ -8,5 +8,101 @@ spec:
   lifecycle: development
   owner: dekt-dev-team2
   system: devx-mood
-  definition: 
-   $text: https://github.com/dektlong/mood-sensors/blob/dev/config/backstage/apis/mood-sensors-swagger.yaml
+  definition: |
+   #$text: https://github.com/dektlong/mood-sensors/blob/dev/config/backstage/apis/mood-sensors-swagger.yaml
+    openapi: "3.0.0"
+    info:
+      description: "Swagger API definition for the mood-sensor component"
+      version: "0.0.2"
+      title: "Mood Sensors"
+    servers:
+      - url: "mood-sensors.dev.dekt.io"
+    #basePath: "/api"
+    tags:
+    - name: "activate"
+      description: "Activate sensors"
+    - name: "measure"
+      description: "Measure sensors data"
+    schemes:
+    - "http"
+    - "https"
+    paths:
+      /activate/{sensorsID}:
+        post:
+          tags:
+          - "activate"
+          summary: "activate a sensor"
+          consumes:
+          - "application/json"
+          produces:
+          - "application/json"
+          parameters:
+          - name: "sensorId"
+            in: "path"
+            description: "ID of sensor to activate"
+            required: true
+            type: "integer"
+            format: "int64"
+          responses:
+            200:
+              description: "successful sensor activation"
+            400:
+              description: "Invalid sensor activation"
+      /activate:
+        post:
+          tags:
+          - "activate"
+          summary: "activate all available sensors"
+          produces:
+          - "application/json"
+          responses:
+            200:
+              description: "successful sensors activation"
+            400:
+              description: "Invalid sensor activation"
+      /measure/{sensorsID}:
+        get:
+          tags:
+          - "measure"
+          summary: "measure the mood status from a given sensors"
+          produces:
+          - "application/json"
+          parameters:
+          - name: "sensorId"
+            in: "path"
+            description: "ID of sensor to measure"
+            required: true
+            type: "integer"
+            format: "int64"
+          responses:
+            200:
+              description: "successful sensor measurement"
+              schema:
+                $ref: "#/definitions/SensorsData"
+            400:
+              description: "Invalid sensor data"
+      /measure:
+        get:
+          tags:
+          - "measure"
+          summary: "measure the mood status from all sensors"
+          produces:
+          - "application/json"
+          responses:
+            200:
+              description: "successful sensors measurements"
+              schema:
+                $ref: "#/definitions/SensorsData"
+            400:
+              description: "Invalid sensor data"
+    definitions:
+      SensorsData:
+        type: "object"
+        properties:
+          sensor:
+            type: "integer"
+            format: "int32"
+          team:
+            type: "string"
+          mood:
+            type: "string"
