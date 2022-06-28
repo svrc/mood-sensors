@@ -1,0 +1,66 @@
+openapi: 3.0.1
+servers:
+  - url: http://mood-sensors.dev.dekt.io
+info:
+  title: API definition for mood-sensors
+  version: 0.0.8
+tags:
+  - name: "contorl-sensors"
+    description: "Contorl sensors operation"
+  - name: "collect-data"
+    description: "Collect data from sensors"
+paths:
+  /activate{sensor_id}:
+    post:
+      tags:
+      - "contorl-sensors"
+      description: "activate a sensor"
+      parameters:
+      - name: "sensor_id"
+        in: path
+        description: "the sensor identifier"
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "successful sensor activation"
+        "400":
+          description: "error activating sensor"
+  /activate:
+    post:
+      tags:
+      - "contorl-sensors"
+      description: "activate all available sensors"
+      responses:
+        "200":
+          description: "successful sensors activation"
+        "400":
+          description: "error activating sensors"
+  /measure/{sensor_id}:
+    get:
+      tags:
+      - "collect-data"
+      description: "measure mood status from a sensor"
+      parameters:
+      - name: "sensor_id"
+        in: path
+        description: "the sensor identifier"
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "successful sensor data collection"
+        "400":
+          description: "error collecting data from sensor"
+  /measure:
+   get:
+      tags:
+      - "collect-data"
+      description: "measure mood status from all sensor"
+      responses:
+        "200":
+          description: "successful sensors data collection"
+        "400":
+          description: "error collecting data from sensors"
