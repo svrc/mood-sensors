@@ -8,6 +8,7 @@ import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,14 +31,13 @@ public class DemoController {
     @Autowired
     WebProperties _webProperties;
 
-    /*
     @RequestMapping("/")
     public String home(Model model) throws SQLException {
         Connection connection = Objects.requireNonNull(_jdbcTemplate.getDataSource()).getConnection();
         model.addAttribute("sensorDB", "Mood Sensors Data");// Store: " + connection.getMetaData().getURL());
         connection.close();
         return "index";
-    }*/
+    }
 
     @RequestMapping("/activate")
     public @ResponseBody
