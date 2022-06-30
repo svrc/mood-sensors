@@ -41,9 +41,9 @@ public class DemoController {
 
     @RequestMapping("/activate")
     public @ResponseBody
-    Map<String, Object> write() {
+    Map<String, String> write() {
         _sensorRepository.save(new Sensor());
-        return new HashMap<>();
+        return new HashMap<String, String>(){{put("sensorStatus","activate");}};
     }
     
     @RequestMapping("/measure")
