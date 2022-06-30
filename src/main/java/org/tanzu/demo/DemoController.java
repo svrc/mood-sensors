@@ -8,16 +8,18 @@ import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.tanzu.demo.config.WebProperties;
 import org.tanzu.demo.model.Sensor;
 import org.tanzu.demo.model.SensorData;
 import org.tanzu.demo.model.SensorRepository;
 
-@Controller
+@CrossOrigin
+@RestController
 public class DemoController {
 
     @Autowired
