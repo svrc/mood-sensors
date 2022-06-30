@@ -1,8 +1,8 @@
 openapi: 3.0.1
 servers:
-  - url: localhost:8080
   - url: http://mood-sensors.dev.dekt.io
   - url: http://mood-sensors.prod.dekt.io
+  - url: localhost:8080
 info:
   title: API definition for mood-sensors
   version: 0.0.8
