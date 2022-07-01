@@ -12,14 +12,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 import org.tanzu.demo.config.WebProperties;
 import org.tanzu.demo.model.Sensor;
 import org.tanzu.demo.model.SensorData;
 import org.tanzu.demo.model.SensorRepository;
 
 @CrossOrigin
-@RestController
+@Controller
 public class DemoController {
 
     @Autowired
@@ -32,11 +32,12 @@ public class DemoController {
     WebProperties _webProperties;
 
     @RequestMapping("/")
-    public String home(Model model) throws SQLException {
+    public String testPortal(Model model) throws SQLException {
+    
         Connection connection = Objects.requireNonNull(_jdbcTemplate.getDataSource()).getConnection();
         model.addAttribute("sensorDB", "Mood Sensors Data");// Store: " + connection.getMetaData().getURL());
         connection.close();
-        return "index";
+        return "test-portal";
     }
 
     @RequestMapping("/activate")
