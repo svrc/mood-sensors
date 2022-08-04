@@ -12,9 +12,9 @@ spec:
       url: https://github.com/dektlong/mood-sensors
       ref:
         branch: dev
-  #serviceClaims:
-  #  - name: rabbitmq-claim
-  #    ref:
-  #      apiVersion: rabbitmq.com/v1beta1
-  #      kind: RabbitmqCluster
-  #      name: reading
+  serviceClaims:
+    - name: rabbitmq-claim
+      ref:
+        apiVersion: rabbitmq.com/v1beta1
+        kind: RabbitmqCluster
+        name: reading

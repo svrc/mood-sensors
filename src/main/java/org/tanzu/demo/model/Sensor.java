@@ -46,7 +46,7 @@ public class Sensor {
     }
 
     public int getId() {
-        return id;
+        return id*10;
     }
 
     public String getType() {
