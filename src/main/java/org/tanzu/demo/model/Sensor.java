@@ -42,7 +42,7 @@ public class Sensor {
             this.mood = "Scared";
         } else if (rand == 5) { 
             this.mood = "Clinically Depressed";
-        } else if (rand == 5) { 
+        } else if (rand == 6) { 
             this.mood = "Socially Angry";
         }
     }
@@ -53,7 +53,7 @@ public class Sensor {
     }
 
     public int getId() {
-        return id*10;
+        return id;
     }
 
     public String getPlanet() {
