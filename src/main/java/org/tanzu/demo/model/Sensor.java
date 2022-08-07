@@ -12,43 +12,39 @@ public class Sensor {
     @Id
     @GeneratedValue
     int id;
-    String planet;
+    String team;
     String mood;
 
     public Sensor() {
         
-        int rand = ThreadLocalRandom.current().nextInt(1, 6);
+        int rand = ThreadLocalRandom.current().nextInt(1, 5);
         if (rand == 1) {
-            this.planet = "Mars";
+            this.team = "architects";
         } else if (rand == 2) {
-            this.planet = "Venus";
+            this.team = "developers";
         } else if (rand == 3) {
-            this.planet = "Jupiter";
+            this.team = "app-operations";
         } else if (rand == 4) {
-            this.planet = "Neptune";
-        } else if (rand == 5) {
-            this.planet = "Saturn";
-        }
+            this.team = "platform-operations";
+        } 
 
         
-        rand = ThreadLocalRandom.current().nextInt(1, 7);
+        rand = ThreadLocalRandom.current().nextInt(1, 6);
         if (rand == 1) {
-            this.mood = "Happy";
+            this.mood = "happy";
         } else if (rand == 2) {
-            this.mood = "Sad";
+            this.mood = "sad";
         } else if (rand == 3) {
-            this.mood = "Bored";
-        } else if (rand == 4) {
-            this.mood = "Scared";
+            this.mood = "scared";
         } else if (rand == 5) { 
-            this.mood = "Clinically Depressed";
+            this.mood = "angry";
         } else if (rand == 6) { 
-            this.mood = "Socially Angry";
+            this.mood = "legacy-mood";
         }
     }
 
     public Sensor(String planet, String mood) {
-        this.planet = planet;
+        this.team = planet;
         this.mood = mood;
     }
 
@@ -56,8 +52,8 @@ public class Sensor {
         return id;
     }
 
-    public String getPlanet() {
-        return planet;
+    public String getTeam() {
+        return team;
     }
 
     public String getMood() {
