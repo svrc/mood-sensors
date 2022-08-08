@@ -19,27 +19,27 @@ public class Sensor {
         
         int rand = ThreadLocalRandom.current().nextInt(1, 5);
         if (rand == 1) {
-            this.team = "architects";
+            this.team = "Architects";
         } else if (rand == 2) {
-            this.team = "developers";
+            this.team = "Developers";
         } else if (rand == 3) {
-            this.team = "app-operations";
+            this.team = "App ops";
         } else if (rand == 4) {
-            this.team = "platform-operations";
+            this.team = "Platform ops";
         } 
 
         
         rand = ThreadLocalRandom.current().nextInt(1, 6);
         if (rand == 1) {
-            this.mood = "happy";
+            this.mood = "Happy";
         } else if (rand == 2) {
-            this.mood = "sad";
+            this.mood = "Sad";
         } else if (rand == 3) {
-            this.mood = "scared";
+            this.mood = "Scared";
         } else if (rand == 4) { 
-            this.mood = "angry";
+            this.mood = "Angry";
         } else if (rand == 5) { 
-            this.mood = "legacy-mood";
+            this.mood = "N/A";
         }
     }
 
