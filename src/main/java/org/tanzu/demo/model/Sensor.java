@@ -12,39 +12,17 @@ public class Sensor {
     @Id
     @GeneratedValue
     int id;
-    String team;
+    String role;
     String mood;
 
     public Sensor() {
         
-        int rand = ThreadLocalRandom.current().nextInt(1, 5);
-        if (rand == 1) {
-            this.team = "Architects";
-        } else if (rand == 2) {
-            this.team = "Developers";
-        } else if (rand == 3) {
-            this.team = "App ops";
-        } else if (rand == 4) {
-            this.team = "Platform ops";
-        } 
-
-        
-        rand = ThreadLocalRandom.current().nextInt(1, 6);
-        if (rand == 1) {
-            this.mood = "Happy";
-        } else if (rand == 2) {
-            this.mood = "Sad";
-        } else if (rand == 3) {
-            this.mood = "Scared";
-        } else if (rand == 4) { 
-            this.mood = "Angry";
-        } else if (rand == 5) { 
-            this.mood = "N/A";
-        }
+        this.role = generateRole();
+        this.mood = generateMood();
     }
 
-    public Sensor(String planet, String mood) {
-        this.team = planet;
+    public Sensor(String role, String mood) {
+        this.role = role;
         this.mood = mood;
     }
 
@@ -52,12 +30,63 @@ public class Sensor {
         return id;
     }
 
-    public String getTeam() {
-        return team;
+    public String getRole() {
+        return role;
     }
 
     public String getMood() {
         return mood;
     }
     
+    private String generateRole() {
+
+        int rand = ThreadLocalRandom.current().nextInt(1, 5);
+        switch(rand) {
+            case 1:
+                return "Architect";
+            case 2:
+                return "Developer";
+            case 3:
+                return "App Operation";
+            case 4:
+                return "Platform Operation";
+            default:
+                return "error!!";
+        }
+    }
+
+    private String generateMood() {
+
+        int rand = ThreadLocalRandom.current().nextInt(1, 5);
+        switch(rand) {
+            case 1:
+                return "Happy " + checkLegacyMood();
+            case 2:
+                return "Sad " + checkLegacyMood();
+            case 3:
+                return "Scared " + checkLegacyMood();
+            case 4:
+                return "Angry " + checkLegacyMood();
+            default:
+                return "error!!";
+        }
+    }
+
+    private String checkLegacyMood() {
+
+        int rand = ThreadLocalRandom.current().nextInt(1, 5);
+        switch(rand) {
+            case 1:
+                return "";
+            case 2:
+                return "with pre-existing medical condition";
+            case 3:
+                return "with pre-existing social sentiment";
+            case 4:
+                return "with pre-existing medical condition & social sentiment";
+            default:
+                return "error!!";
+        }
+    }
+
 }
