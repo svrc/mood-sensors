@@ -47,9 +47,9 @@ public class Sensor {
             case 2:
                 return "Developer";
             case 3:
-                return "App Operation";
+                return "App Operator";
             case 4:
-                return "Platform Operation";
+                return "Platform Operator";
             default:
                 return "error!!";
         }
@@ -79,11 +79,11 @@ public class Sensor {
             case 1:
                 return "";
             case 2:
-                return "with pre-existing medical condition";
+                return "(legacy medical condition)";
             case 3:
-                return "with pre-existing social sentiment";
+                return "(legacy social sentiment)";
             case 4:
-                return "with pre-existing medical condition & social sentiment";
+                return "(legacy medical condition & social sentiment)";
             default:
                 return "error!!";
         }
