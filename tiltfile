@@ -1,4 +1,4 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='harbor.apps.cf.tanzutime.com/dekt-dev/mysensors-source')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='example.com/dekt-dev/mysensors-source')
 
 k8s_custom_deploy(
     'mysensors',
