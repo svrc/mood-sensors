@@ -16,7 +16,6 @@ spec:
   dependsOn: 
     - resource:inventory
     - resource:reading
-    - resource:brownfield
   providesApis:
     - mood-sensors-apis
   consumesApis:
