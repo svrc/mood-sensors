@@ -9,4 +9,4 @@ spec:
   owner: dekt-dev-team2
   system: devx-mood
   definition:
-   $text: https://github.com/dektlong/mood-sensors/blob/dev/config/backstage/apis/mood-sensors-api-definition.yaml
+   $text: https://github.com/dektlong/mood-sensors/blob/dev/backstage/apis/mood-sensors-api-definition.yaml
