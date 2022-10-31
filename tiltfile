@@ -1,21 +1,25 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='example.com/dekt-dev/mysensors-source')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE")
+LOCAL_PATH = os.getenv("LOCAL_PATH")
+NAMESPACE = os.getenv("NAMESPACE")
+OUTPUT_TO_NULL_COMMAND =' > /dev/null '
 
 k8s_custom_deploy(
-    'mysensors',
-    apply_cmd="tanzu apps workload apply -f workload.yaml --live-update" +
-               " --local-path ." +
-               " --source-image " + SOURCE_IMAGE +
-               " --namespace mydev" +
-               " --yes >/dev/null" +
-               " && tanzu apps workload get mysensors --namespace mydev -o yaml",
-    delete_cmd="tanzu apps workload delete -f config/workload.yaml --namespace mydev --yes",
+    'workload-name',
+    apply_cmd="tanzu apps workload apply -f workload.yaml --debug --live-update" +
+        " --local-path " + LOCAL_PATH +
+        " --source-image " + SOURCE_IMAGE +
+        " --namespace " + NAMESPACE +
+        " --yes " +
+        OUTPUT_TO_NULL_COMMAND + 
+        " && kubectl get workload mysensors --namespace " + NAMESPACE + " -o yaml",
+    delete_cmd="tanzu apps workload delete -f  workload.yaml --namespace " + NAMESPACE + " --yes" ,
     deps=['pom.xml', './target/classes'],
     container_selector='workload',
     live_update=[
-      sync('./target/classes', '/workspace/BOOT-INF/classes')
+        sync('./target/classes', '/workspace/BOOT-INF/classes')
     ]
 )
 
-k8s_resource('mysensors', port_forwards=["8080:8080"],
-            extra_pod_selectors=[{'serving.knative.dev/service': 'mysensors'}])
-allow_k8s_contexts('devxmood-dev')
+k8s_resource('workload-name', port_forwards=["8080:8080"],
+    extra_pod_selectors=[{'serving.knative.dev/service': 'workload-name'}])
+allow_k8s_contexts('dev-mood')
