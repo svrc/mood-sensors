@@ -77,13 +77,13 @@ public class Sensor {
         int rand = ThreadLocalRandom.current().nextInt(1, 5);
         switch(rand) {
             case 1:
-                return "";
+                return "  |  Pre-existing conditions: None  ";
             case 2:
-                return "(legacy medical condition)";
+                return "  |  Pre-existing conditions: <font color='#B87333'>Medical</font>";
             case 3:
-                return "(legacy social sentiment)";
+                return "  |  Pre-existing conditions: <font color='#B87333'>Social</font>";
             case 4:
-                return "(legacy medical condition & social sentiment)";
+                return "  |  Pre-existing conditions: <font color='#B87333'>Medical, Social</font>";
             default:
                 return "error!!";
         }
