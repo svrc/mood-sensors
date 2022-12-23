@@ -60,13 +60,13 @@ public class Sensor {
         int rand = ThreadLocalRandom.current().nextInt(1, 5);
         switch(rand) {
             case 1:
-                return addCurrentMoodLabel() + "Happy " + checkLegacyMood();
+                return "Happy " + checkLegacyMood();
             case 2:
-                return addCurrentMoodLabel() + "Sad " + checkLegacyMood();
+                return "Sad " + checkLegacyMood();
             case 3:
-                return addCurrentMoodLabel() + "Scared " + checkLegacyMood();
+                return "Scared " + checkLegacyMood();
             case 4:
-            return addCurrentMoodLabel() + "Angry " + checkLegacyMood();
+                return "Angry " + checkLegacyMood();
             default:
                 return "error!!";
         }
@@ -79,23 +79,13 @@ public class Sensor {
             case 1:
                 return "";
             case 2:
-                return addLegacyMoodLabel() + "Medical";
+                return  "<font color='#B87333'>&nbsp;&nbsp;&nbsp;<small>pre-existing: medical</small> </font>";
             case 3:
-                return addLegacyMoodLabel() + "Social";
+                return  "<font color='#B87333'>&nbsp;&nbsp;&nbsp;<small>pre-existing: social</small> </font>";
             case 4:
-                return addLegacyMoodLabel() + "Medical, Social";
+                return  "<font color='#B87333'>&nbsp;&nbsp;&nbsp;<small>pre-existing: medical, social</small> </font>";
             default:
                 return "error!!";
         }
     }
-
-    private String addCurrentMoodLabel() {
-        return "<font color='#097969'><small>current:</small> </font>";
-    }
-
-    private String addLegacyMoodLabel() {
-        return "<font color='#B87333'>&nbsp;<small>pre-existing:</small> </font>";
-    }
-
-
 }
