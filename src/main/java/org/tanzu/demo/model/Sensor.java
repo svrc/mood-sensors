@@ -50,13 +50,13 @@ public class Sensor {
         int rand = ThreadLocalRandom.current().nextInt(1, 5);
         switch(rand) {
             case 1:
-                return "Architect";
+                return "architect";
             case 2:
-                return "Developer";
+                return "developer";
             case 3:
-                return "App Operator";
+                return "app operator";
             case 4:
-                return "Platform Operator";
+                return "platform operator";
             default:
                 return "error!!";
         }
@@ -67,13 +67,13 @@ public class Sensor {
         int rand = ThreadLocalRandom.current().nextInt(1, 5);
         switch(rand) {
             case 1:
-                return "Happy";
+                return "happy";
             case 2:
-                return "Sad";
+                return "sad";
             case 3:
-                return "Scared";
+                return "scared";
             case 4:
-                return "Angry";
+                return "angry";
             default:
                 return "error!!";
         }
@@ -84,13 +84,13 @@ public class Sensor {
         int rand = ThreadLocalRandom.current().nextInt(1, 5);
         switch(rand) {
             case 1:
-                return "N/A";
+                return "none";
             case 2:
-                return "Social";
+                return "social issues";
             case 3:
-                return "Medical";
+                return "medical condition";
             case 4:
-                return "Social, Medical";
+                return "social issues, medical condition";
             default:
                 return "error!!";
         }
