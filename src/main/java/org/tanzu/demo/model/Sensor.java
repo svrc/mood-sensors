@@ -90,11 +90,11 @@ public class Sensor {
     }
 
     private String addCurrentMoodLabel() {
-        return "<font size='small' color='#097969'>Current: </font>";
+        return "<font color='#097969'><small>current:</small> </font>";
     }
 
     private String addLegacyMoodLabel() {
-        return "<font size='small' color='#B87333'>&nbsp;Pre-existing: </font>";
+        return "<font color='#B87333'>&nbsp;<small>pre-existing:</small> </font>";
     }
 
 
