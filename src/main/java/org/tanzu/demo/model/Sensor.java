@@ -14,16 +14,19 @@ public class Sensor {
     int id;
     String role;
     String mood;
+    String legacy;
 
     public Sensor() {
         
         this.role = generateRole();
         this.mood = generateMood();
+        this.legacy = generateLegacy();
     }
 
-    public Sensor(String role, String mood) {
+    public Sensor(String role, String mood, String legacy) {
         this.role = role;
         this.mood = mood;
+        this.legacy = legacy;
     }
 
     public int getId() {
@@ -36,6 +39,10 @@ public class Sensor {
 
     public String getMood() {
         return mood;
+    }
+
+    public String getLEgacy() {
+        return legacy;
     }
     
     private String generateRole() {
@@ -60,30 +67,30 @@ public class Sensor {
         int rand = ThreadLocalRandom.current().nextInt(1, 5);
         switch(rand) {
             case 1:
-                return "Happy " + checkLegacyMood();
+                return "Happy";
             case 2:
-                return "Sad " + checkLegacyMood();
+                return "Sad";
             case 3:
-                return "Scared " + checkLegacyMood();
+                return "Scared";
             case 4:
-                return "Angry " + checkLegacyMood();
+                return "Angry";
             default:
                 return "error!!";
         }
     }
 
-    private String checkLegacyMood() {
+    private String generateLegacy() {
 
         int rand = ThreadLocalRandom.current().nextInt(1, 5);
         switch(rand) {
             case 1:
-                return "";
+                return "N/A";
             case 2:
-                return  "<font color='#B87333'>&nbsp;&nbsp;&nbsp;<small>pre-existing: medical</small> </font>";
+                return "Social";
             case 3:
-                return  "<font color='#B87333'>&nbsp;&nbsp;&nbsp;<small>pre-existing: social</small> </font>";
+                return "Medical";
             case 4:
-                return  "<font color='#B87333'>&nbsp;&nbsp;&nbsp;<small>pre-existing: medical, social</small> </font>";
+                return "Social, Medical";
             default:
                 return "error!!";
         }
