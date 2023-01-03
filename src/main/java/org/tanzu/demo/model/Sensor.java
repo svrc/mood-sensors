@@ -64,15 +64,13 @@ public class Sensor {
 
     private String generateMood() {
 
-        int rand = ThreadLocalRandom.current().nextInt(1, 5);
+        int rand = ThreadLocalRandom.current().nextInt(1, 4);
         switch(rand) {
             case 1:
                 return "happy";
             case 2:
                 return "sad";
             case 3:
-                return "scared";
-            case 4:
                 return "angry";
             default:
                 return "error!!";
