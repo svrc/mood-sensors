@@ -4,7 +4,7 @@ NAMESPACE = os.getenv("NAMESPACE")
 OUTPUT_TO_NULL_COMMAND =' > /dev/null '
 
 k8s_custom_deploy(
-    'workload-name',
+    'mysensors',
     apply_cmd="tanzu apps workload apply -f workload.yaml --debug --live-update" +
         " --local-path " + LOCAL_PATH +
         " --source-image " + SOURCE_IMAGE +
@@ -20,6 +20,6 @@ k8s_custom_deploy(
     ]
 )
 
-k8s_resource('workload-name', port_forwards=["8080:8080"],
-    extra_pod_selectors=[{'serving.knative.dev/service': 'workload-name'}])
+k8s_resource('mysensors', port_forwards=["8080:8080"],
+    extra_pod_selectors=[{'serving.knative.dev/service': 'mysensors'}])
 allow_k8s_contexts('dev-mood')
