@@ -54,9 +54,9 @@ public class Sensor {
             case 2:
                 return "developer";
             case 3:
-                return "app operator";
+                return "toolsmith";
             case 4:
-                return "platform operator";
+                return "platform engineer";
             default:
                 return "error!!";
         }
